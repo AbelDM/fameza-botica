@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Botica Fameza</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #B3E5FC;">
+  {%if request.user.is_authenticated%}
+    {% include "fameza/customer_navbar.html" %}
+  {%else%}
+    {% include "fameza/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+  <div class="container">
+<h3 style="text-align:center;align-content: center">
+ NOSOTROS
+  </h3>
+  <p>Boticas Fameza se inició con uno de los hermanos Meza quien en compañía de su esposa juntaron su capital con mucho esfuerzo y decidieron apostar por el rubro farmacéutico aperturando un local en villa el salvador llamándolo “Farmatodos” en el año 2002.
+      Con el transcurso de los años viendo que ya se introducían al mercado las competencias como las (cadenas de boticas) vieron la necesidad de formar una sociedad, es entonces que en el año 2006 deciden asociarse a dos de los hermanos Meza con los cuales juntaron esfuerzos, conocimientos y enrumbaron juntos al mercado farmacéutico.
+      En el año 2007 se forma Grupo Fameza SAC, cuyo nombre comercial Boticas Fameza se debe a la Familia Meza. En la actualidad estos socios, siguen trabajando arduamente con el apoyo del grupo humano de colaboradores que los acompañan actualmente, para brindar un buen servicio, precios competitivos, productos de calidad y procedencia legal que contribuyan a cuidar la salud de nuestros (sociedad) clientes.</p>
+</div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      {% include "fameza/footer.html" %}
+</body>
+</html>

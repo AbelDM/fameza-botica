@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Botica Fameza</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+  {%if request.user.is_authenticated%}
+    {% include "fameza/customer_navbar.html" %}
+  {%else%}
+    {% include "fameza/navbar.html" %}
+  {%endif%}
+  {%block content%}
+  {%endblock content%}
+  {% include "fameza/footer.html" %}
+</body>
+</html>
